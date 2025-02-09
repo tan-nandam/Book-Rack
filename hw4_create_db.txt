@@ -1,0 +1,133 @@
+use Books
+db.createCollection("items")
+db.createCollection("useritems")
+db.createCollection("users")
+
+--------------------------------------------------Items Db("items")-------------------------------------------------------
+db.items.insert([{
+        "userId":"tnandam",
+        "itemCode": 'cheaters',
+        "itemName":'Cheaters',
+        "catalogCategory":'New Books',
+        "description":'Cheaters tells nine short stories, each discussing a different shade of infidelity in todays times when societal norms are still the same-archaic. However, the urge to explore and experiment amongst the youth is at an all-time high. This friction, if not handled well, could lead to unexpected roads. Each story, though high on emotions, unfolds in a thrilling narrative.',
+        "rating":'5',
+        "imageURL": '/assets/images/chetares.jpg'
+    },{
+        "userId":"tnandam",
+        "itemCode": 'algos',
+        "itemName":'Introduction to Algorithms',
+        "catalogCategory":'New Books',
+        "description":"Some books on algorithms are rigorous but incomplete; others cover masses of material but lack rigor. Introduction to Algorithms uniquely combines rigor and comprehensiveness. The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers. Each chapter is relatively self-contained and can be used as a unit of study.",
+        "rating":"3",
+        "imageURL": '/assets/images/algos.png'
+    },{
+        "userId":"tnandam",
+        "itemCode": 'ds',
+        "itemName":"Data Structures",
+        "catalogCategory":"New Books",
+        "description":"Designed to function as a textbook or as a professional reference, Fundamentals of Data Structures in C provides in-depth coverage of all aspects of data structure implementation in ANSI C. The book goes beyond the standard fare of stacks, queues, and lists to offer such features as afull chapter on search structures and a discussion of advanced tree structures.",
+        "rating":"4",
+        "imageURL": '/assets/images/fds.jpg'
+    },{
+        "userId":"tnandam",
+        "itemCode": 'sql',
+        "itemName":"SQL Handbook",
+        "catalogCategory":"Used Books",
+        "description":"SQL Pocket Guide describes how these database systems implement SQL syntax for querying, managing transactions, and making changes to data. It also shows how the systems use SQL functions, regular expression syntax, and type conversion functions and formats.",
+        "rating":"5",
+        "imageURL": '/assets/images/sql.jpg'
+    },{
+        "userId":"tnandam",
+        "itemCode": 'bunny',
+        "itemName":'Pat The Bunny',
+        "catalogCategory":'Used Books',
+        "description":"For over 75 years, Pat the Bunny has been creating special first-time moments between parents and their children. One of the best-selling children’s books of all time, this classic touch-and-feel book offers babies a playful and engaging experience, all the while creating cherished memories that will last a lifetime.",
+        "rating":"3",
+        "imageURL": '/assets/images/bunny.jpg'
+    },{
+        "userId":"tnandam",
+        "itemCode": 'pokemon',
+        "itemName":'Pokemon',
+        "catalogCategory":'Used Books',
+        "description":'Pokémon, also known as Pocket Monsters in Japan, is a media franchise managed by The Pokémon Company, a Japanese consortium between Nintendo, Game Freak, and Creatures. The franchise copyright is shared by all three companies, but Nintendo is the sole owner of the trademark',
+        "rating":'2',
+        "imageURL": '/assets/images/pokemon.jpg'
+    }]);
+----------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------User Items("useritems")--------------------------------------------------------------------
+db.useritems.insert([{
+"userId":"tnandam",
+"itemCode": 'cheaters',
+"itemName":'Cheaters',
+"catalogCategory":'New Books',
+"description":'Cheaters tells nine short stories, each discussing a different shade of infidelity in todays times when societal norms are still the same-archaic. However, the urge to explore and experiment amongst the youth is at an all-time high. This friction, if not handled well, could lead to unexpected roads. Each story, though high on emotions, unfolds in a thrilling narrative.',
+"rating":5,
+"imageURL": '/assets/images/chetares.jpg',
+"madeIt":"No"
+},{
+"userId":"tnandam",
+ "itemCode": 'algos',
+        "itemName":'Introduction to Algorithms',
+        "catalogCategory":'New Books',
+          "description":"Some books on algorithms are rigorous but incomplete; others cover masses of material but lack rigor. Introduction to Algorithms uniquely combines rigor and comprehensiveness. The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers. Each chapter is relatively self-contained and can be used as a unit of study.",
+  "rating":3,
+  "imageURL": '/assets/images/algos.png',
+  "madeIt":"yes"
+},{
+"userId":"tnandam",
+        "itemCode": 'ds',
+        "itemName":"Data Structures",
+        "catalogCategory":"New Books",
+        "description":"Designed to function as a textbook or as a professional reference, Fundamentals of Data Structures in C provides in-depth coverage of all aspects of data structure implementation in ANSI C. The book goes beyond the standard fare of stacks, queues, and lists to offer such features as afull chapter on search structures and a discussion of advanced tree structures.",
+  "rating":4,
+  "imageURL": '/assets/images/fds.jpg',
+  "madeIt":"No"
+},{
+"userId":"ssuram",
+        "itemCode": 'sql',
+        "itemName":"SQL Handbook",
+        "catalogCategory":"Used Books",
+        "description":"SQL Pocket Guide describes how these database systems implement SQL syntax for querying, managing transactions, and making changes to data. It also shows how the systems use SQL functions, regular expression syntax, and type conversion functions and formats.",
+  "rating":5,
+  "imageURL": '/assets/images/sql.jpg',
+  "madeIt":"No"
+},{
+"userId":"ssuram",
+        "itemCode": 'bunny',
+        "itemName":'Pat The Bunny',
+        "catalogCategory":'Used Books',
+  "rating":3,
+  "description":"For over 75 years, Pat the Bunny has been creating special first-time moments between parents and their children. One of the best-selling children’s books of all time, this classic touch-and-feel book offers babies a playful and engaging experience, all the while creating cherished memories that will last a lifetime.",
+      "imageURL": '/assets/images/bunny.jpg',
+  "madeIt":"yes"
+}]);
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------User Profile("users")----------------------------------------------------------------
+db.users.insert([{
+  "UserId":"tnandam",
+  "Password":"abc123",
+  "FirstName":"Tanusha Nandam",
+  "LastName":"Suram",
+  "EmailAddress":"tnandam@utd.edu",
+  "AddressLine1":"216 Barton Creek Drive",
+  "AddressLine2":"AptF",
+  "City":"Charlotte",
+  "State":"North Carolina",
+  "PostalCode":"26282",
+  "Country":"America"
+},{
+  "UserId":"ssuram",
+  "Password":"abc321",
+  "FirstName":"Sudhakara Reddy",
+  "LastName":"Suram",
+  "EmailAddress":"ssuram@utd.edu",
+  "AddressLine1":"216 Barton Creek Drive",
+  "AddressLine2":"AptF",
+  "City":"Charlotte",
+  "State":"North Carolina",
+  "PostalCode":"26282",
+  "Country":"America"
+}]);
+-----------------------------------------------------------------------------------------------------------------------------------------------
